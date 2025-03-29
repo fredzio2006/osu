@@ -150,7 +150,6 @@ namespace osu.Game.Rulesets.Taiko
                         new TaikoModDifficultyAdjust(),
                         new TaikoModClassic(),
                         new TaikoModSwap(),
-                        new TaikoModMinusScore(),
                         new TaikoModSingleTap(),
                         new TaikoModConstantSpeed(),
                     };
@@ -173,6 +172,7 @@ namespace osu.Game.Rulesets.Taiko
                 case ModType.System:
                     return new Mod[]
                     {
+                        new TaikoModMinusScore(),
                         new ModScoreV2(),
                     };
 

@@ -329,6 +329,8 @@ namespace osu.Game.Overlays.Mods
             yield return createModColumnContent(ModType.Automation);
             yield return createModColumnContent(ModType.Conversion);
             yield return createModColumnContent(ModType.Fun);
+            //yield return createModColumnContent(ModType.Settings);
+            yield return createModColumnContent(ModType.System);
         }
 
         private ColumnDimContainer createModColumnContent(ModType modType)
@@ -362,7 +364,7 @@ namespace osu.Game.Overlays.Mods
             }
 
             AvailableMods.Value = newLocalAvailableMods;
-            filterMods();
+            // filterMods();
 
             foreach (var column in columnFlow.Columns.OfType<ModColumn>())
                 column.AvailableMods = AvailableMods.Value.GetValueOrDefault(column.ModType, Array.Empty<ModState>());

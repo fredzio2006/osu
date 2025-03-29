@@ -12,7 +12,7 @@ namespace osu.Game.Rulesets.Mods
         public override string Name => "Minus Score";
         public override string Acronym => "-1";
         public override LocalisableString Description => "Score times -1.";
-        public override ModType Type => ModType.Conversion;
+        public override ModType Type => ModType.System;
         public override double ScoreMultiplier => -1;
 
     }

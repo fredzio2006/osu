@@ -184,7 +184,7 @@ namespace osu.Game.Rulesets.Osu
                         new OsuModClassic(),
                         new OsuModRandom(),
                         new OsuModMirror(),
-                        new OsuModMinusScore(),
+                        //new OsuModMinusScore(),
                         new MultiMod(new OsuModAlternate(), new OsuModSingleTap()),
                     };
 
@@ -222,6 +222,7 @@ namespace osu.Game.Rulesets.Osu
                 case ModType.System:
                     return new Mod[]
                     {
+                        new OsuModMinusScore(),
                         new OsuModTouchDevice(),
                         new ModScoreV2(),
                     };

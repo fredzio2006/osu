@@ -260,7 +260,6 @@ namespace osu.Game.Rulesets.Mania
                         new ManiaModRandom(),
                         new ManiaModDualStages(),
                         new ManiaModMirror(),
-                        new ManiaModMinusScore(),
                         new ManiaModDifficultyAdjust(),
                         new ManiaModClassic(),
                         new ManiaModInvert(),
@@ -297,6 +296,7 @@ namespace osu.Game.Rulesets.Mania
                 case ModType.System:
                     return new Mod[]
                     {
+                        new ManiaModMinusScore(),
                         new ModScoreV2(),
                     };
 
