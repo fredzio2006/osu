@@ -39,7 +39,7 @@ namespace osu.Game.Rulesets.Mods
             Precision = 0.1f,
             MinValue = 0,
             MaxValue = 10,
-            ExtendedMaxValue = 11,
+            ExtendedMaxValue = 100,
             ReadCurrentFromDifficulty = diff => diff.DrainRate,
         };
 
@@ -49,7 +49,7 @@ namespace osu.Game.Rulesets.Mods
             Precision = 0.1f,
             MinValue = 0,
             MaxValue = 10,
-            ExtendedMaxValue = 11,
+            ExtendedMaxValue = 19, /*/ in takio 16,6 is max where you can get 300 and 18,3 is last possible with autoplay /*/
             ReadCurrentFromDifficulty = diff => diff.OverallDifficulty,
         };
 
