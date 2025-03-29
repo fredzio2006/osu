@@ -10,7 +10,11 @@ using osu.Game.Rulesets.Mania.Beatmaps;
 
 namespace osu.Game.Rulesets.Mania.Mods
 {
-    public class ManiaModMinusScore : ModMinusScore
+    public class ManiaModMinusScore : ModMinusScore, IApplicableToBeatmap
     {
+            public void ApplyToBeatmap(IBeatmap beatmap)
+        {
+            int availableColumns = ((ManiaBeatmap)beatmap).TotalColumns;
+        }
     }
 }

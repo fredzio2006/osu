@@ -9,8 +9,8 @@ namespace osu.Game.Rulesets.Mods
 {
     public abstract class ModMinusScore : Mod
     {
-        public override string Name => "MinusScore";
-        public override string Acronym => "MS";
+        public override string Name => "Minus Score";
+        public override string Acronym => "-1";
         public override LocalisableString Description => "Score times -1.";
         public override ModType Type => ModType.Conversion;
         public override double ScoreMultiplier => -1;

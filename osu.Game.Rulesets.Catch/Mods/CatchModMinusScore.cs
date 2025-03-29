@@ -14,7 +14,12 @@ using osuTK;
 namespace osu.Game.Rulesets.Catch.Mods
 
 {
-    public class CatchModMinusScore : ModMinusScore
+    public class CatchModMinusScore : ModMinusScore, IApplicableToBeatmap
     {
+
+        public void ApplyToBeatmap(IBeatmap beatmap)
+        {
+            var catchBeatmap = (CatchBeatmap)beatmap;
+        }
     }
 }

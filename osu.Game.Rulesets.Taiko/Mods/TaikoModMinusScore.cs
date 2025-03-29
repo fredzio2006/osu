@@ -9,10 +9,14 @@ using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.Taiko.Beatmaps;
 using osu.Game.Rulesets.Taiko.Objects;
 
-
 namespace osu.Game.Rulesets.Taiko.Mods
 {
-    public class TaikoModMinusScore : ModMinusScore
+    public class TaikoModMinusScore : ModMinusScore, IApplicableToBeatmap
     {
+        public void ApplyToBeatmap(IBeatmap beatmap)
+        {
+            var taikoBeatmap = (TaikoBeatmap)beatmap;
+
+        }
     }
 }
