@@ -39,8 +39,8 @@ namespace osu.Game.Rulesets.Mods
         [SettingSource("Initial rate", "The starting speed of the track", SettingControlType = typeof(MultiplierSettingsSlider))]
         public BindableNumber<double> InitialRate { get; } = new BindableDouble(1)
         {
-            MinValue = 0.5,
-            MaxValue = 2,
+            MinValue = 0.1,
+            MaxValue = 5,
             Precision = 0.01
         };
 

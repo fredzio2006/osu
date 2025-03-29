@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.Mods
         [SettingSource("Speed decrease", "The actual decrease to apply", SettingControlType = typeof(MultiplierSettingsSlider))]
         public override BindableNumber<double> SpeedChange { get; } = new BindableDouble(0.75)
         {
-            MinValue = 0.5,
+            MinValue = 0.1,
             MaxValue = 0.99,
             Precision = 0.01,
         };

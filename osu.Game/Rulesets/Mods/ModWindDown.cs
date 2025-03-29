@@ -18,15 +18,15 @@ namespace osu.Game.Rulesets.Mods
 
         public override BindableNumber<double> InitialRate { get; } = new BindableDouble(1)
         {
-            MinValue = 0.51,
-            MaxValue = 2,
+            MinValue = 0.11,
+            MaxValue = 5,
             Precision = 0.01,
         };
 
         public override BindableNumber<double> FinalRate { get; } = new BindableDouble(0.75)
         {
-            MinValue = 0.5,
-            MaxValue = 1.99,
+            MinValue = 0.1,
+            MaxValue = 4.99,
             Precision = 0.01,
         };
 
