@@ -260,6 +260,7 @@ namespace osu.Game.Rulesets.Mania
                         new ManiaModRandom(),
                         new ManiaModDualStages(),
                         new ManiaModMirror(),
+                        new ManiaModMinusScore(),
                         new ManiaModDifficultyAdjust(),
                         new ManiaModClassic(),
                         new ManiaModInvert(),

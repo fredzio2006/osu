@@ -184,7 +184,8 @@ namespace osu.Game.Rulesets.Osu
                         new OsuModClassic(),
                         new OsuModRandom(),
                         new OsuModMirror(),
-                        new MultiMod(new OsuModAlternate(), new OsuModSingleTap())
+                        new OsuModMinusScore(),
+                        new MultiMod(new OsuModAlternate(), new OsuModSingleTap()),
                     };
 
                 case ModType.Automation:

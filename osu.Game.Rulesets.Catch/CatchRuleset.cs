@@ -133,6 +133,7 @@ namespace osu.Game.Rulesets.Catch
                     {
                         new CatchModDifficultyAdjust(),
                         new CatchModClassic(),
+                        new CatchModMinusScore(),
                         new CatchModMirror(),
                     };
 
