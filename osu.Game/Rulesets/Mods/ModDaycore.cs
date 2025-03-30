@@ -49,7 +49,8 @@ namespace osu.Game.Rulesets.Mods
             track.AddAdjustment(AdjustableProperty.Frequency, freqAdjust);
             track.AddAdjustment(AdjustableProperty.Tempo, tempoAdjust);
         }
-
-        public override double ScoreMultiplier => rateAdjustHelper.ScoreMultiplier;
+        public override double ScoreMultiplier => SpeedChange.Value >= 0.5
+            ? rateAdjustHelper.ScoreMultiplier
+            : 0.05;
     }
 }
