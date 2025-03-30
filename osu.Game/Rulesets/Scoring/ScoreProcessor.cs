@@ -54,7 +54,7 @@ namespace osu.Game.Rulesets.Scoring
         /// <summary>
         /// The current total score.
         /// </summary>
-        public readonly BindableLong TotalScore = new BindableLong { MinValue = 0 };
+        public readonly BindableLong TotalScore = new BindableLong();
 
         /// <summary>
         /// The total number of points awarded for the score without including mod multipliers.
@@ -62,7 +62,7 @@ namespace osu.Game.Rulesets.Scoring
         /// <remarks>
         /// The purpose of this property is to enable future lossless rebalances of mod multipliers.
         /// </remarks>
-        public readonly BindableLong TotalScoreWithoutMods = new BindableLong { MinValue = 0 };
+        public readonly BindableLong TotalScoreWithoutMods = new BindableLong();
 
         /// <summary>
         /// The current accuracy.
@@ -371,15 +371,15 @@ namespace osu.Game.Rulesets.Scoring
 
         private void updateScore()
         {
-            Accuracy.Value = currentMaximumBaseScore > 0 ? currentBaseScore / currentMaximumBaseScore : 1;
-            MinimumAccuracy.Value = maximumBaseScore > 0 ? currentBaseScore / maximumBaseScore : 0;
-            MaximumAccuracy.Value = maximumBaseScore > 0 ? (currentBaseScore + (maximumBaseScore - currentMaximumBaseScore)) / maximumBaseScore : 1;
+        Accuracy.Value = currentMaximumBaseScore > 0 ? currentBaseScore / currentMaximumBaseScore : 1;
+        MinimumAccuracy.Value = maximumBaseScore > 0 ? currentBaseScore / maximumBaseScore : 0;
+        MaximumAccuracy.Value = maximumBaseScore > 0 ? (currentBaseScore + (maximumBaseScore - currentMaximumBaseScore)) / maximumBaseScore : 1;
 
-            double comboProgress = maximumComboPortion > 0 ? currentComboPortion / maximumComboPortion : 1;
-            double accuracyProgress = maximumAccuracyJudgementCount > 0 ? (double)currentAccuracyJudgementCount / maximumAccuracyJudgementCount : 1;
+        double comboProgress = maximumComboPortion > 0 ? currentComboPortion / maximumComboPortion : 1;
+        double accuracyProgress = maximumAccuracyJudgementCount > 0 ? (double)currentAccuracyJudgementCount / maximumAccuracyJudgementCount : 1;
 
-            TotalScoreWithoutMods.Value = (long)Math.Round(ComputeTotalScore(comboProgress, accuracyProgress, currentBonusPortion));
-            TotalScore.Value = (long)Math.Round(TotalScoreWithoutMods.Value * scoreMultiplier);
+        TotalScoreWithoutMods.Value = (long)Math.Round(ComputeTotalScore(comboProgress, accuracyProgress, currentBonusPortion));
+        TotalScore.Value = (long)Math.Round(TotalScoreWithoutMods.Value * scoreMultiplier);
         }
 
         private void updateRank()
