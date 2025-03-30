@@ -45,6 +45,6 @@ namespace osu.Game.Rulesets.Mods
         }
         public override double ScoreMultiplier => SpeedChange.Value >= 0.5
             ? rateAdjustHelper.ScoreMultiplier
-            : 0.05;
+            : 0.01;
     }
 }
