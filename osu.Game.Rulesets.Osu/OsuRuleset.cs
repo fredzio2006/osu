@@ -218,6 +218,12 @@ namespace osu.Game.Rulesets.Osu
                         new OsuModDepth(),
                         new OsuModBloom()
                     };
+                case ModType.Settings:
+                    return new Mod[]
+                    {
+                        new OsuModTemplateSettings(),
+                    };
+
 
                 case ModType.System:
                     return new Mod[]

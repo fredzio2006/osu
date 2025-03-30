@@ -14,6 +14,7 @@ namespace osu.Game.Rulesets.Mods
         public override LocalisableString Description => "Score times -1.";
         public override ModType Type => ModType.System;
         public override double ScoreMultiplier => -1;
+        public override bool Ranked => false;
 
     }
 }
