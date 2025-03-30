@@ -364,7 +364,7 @@ namespace osu.Game.Overlays.Mods
             }
 
             AvailableMods.Value = newLocalAvailableMods;
-            // filterMods();
+            filterMods();
 
             foreach (var column in columnFlow.Columns.OfType<ModColumn>())
                 column.AvailableMods = AvailableMods.Value.GetValueOrDefault(column.ModType, Array.Empty<ModState>());
@@ -373,7 +373,7 @@ namespace osu.Game.Overlays.Mods
         private void filterMods()
         {
             foreach (var modState in AllAvailableMods)
-                modState.ValidForSelection.Value = modState.Mod.Type != ModType.System && modState.Mod.HasImplementation && IsValidMod.Invoke(modState.Mod);
+                modState.ValidForSelection.Value = modState.Mod.Type != ModType.a && modState.Mod.HasImplementation && IsValidMod.Invoke(modState.Mod);
         }
 
         private void updateCustomisation()
