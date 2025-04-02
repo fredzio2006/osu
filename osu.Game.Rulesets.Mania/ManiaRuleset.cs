@@ -299,6 +299,11 @@ namespace osu.Game.Rulesets.Mania
                         new ManiaModMinusScore(),
                         new ModScoreV2(),
                     };
+                case ModType.Settings:
+                    return new Mod[]
+                    {
+                        new ManiaModTemplateSettings()
+                    };
 
                 default:
                     return Array.Empty<Mod>();

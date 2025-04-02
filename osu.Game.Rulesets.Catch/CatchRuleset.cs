@@ -158,6 +158,11 @@ namespace osu.Game.Rulesets.Catch
                         new CatchModMinusScore(),
                         new ModScoreV2(),
                     };
+                case ModType.Settings:
+                    return new Mod[]
+                    {
+                        new CatchModTemplateSettings()
+                    };
 
                 default:
                     return Array.Empty<Mod>();

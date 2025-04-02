@@ -175,6 +175,11 @@ namespace osu.Game.Rulesets.Taiko
                         new TaikoModMinusScore(),
                         new ModScoreV2(),
                     };
+                case ModType.Settings:
+                    return new Mod[]
+                    {
+                        new TaikoModTemplateSettings()
+                    };
 
                 default:
                     return Array.Empty<Mod>();
